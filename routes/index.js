@@ -1,14 +1,14 @@
 var express = require("express");
 var router = express.Router();
 
-
-const userList = [{
-  id: 1,
-  firstName: "John",
-  lastName: "Doe",
-  email: "jd@gmail.com"
-}];
-
+const userList = [
+  {
+    id: 1,
+    firstName: "John",
+    lastName: "Doe",
+    email: "jd@gmail.com",
+  },
+];
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -16,10 +16,9 @@ router.get("/", function (req, res, next) {
 });
 
 // GET users
-router.get('/get-users', function (req, res) {
+router.get("/get-users", function (req, res) {
   res.json(userList);
-})
-
+});
 
 router.post("/post-message", async (req, res) => {
   try {
